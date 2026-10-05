@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:padding="20dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SplashDemo"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Main Content -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Main Screen"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:layout_marginBottom="30dp"
+        android:gravity="center" />
+
+    <!-- Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the main activity that opens after the splash screen (3 seconds delay)."
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Key Points -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✅ Key Points to Remember\n\n• A splash screen is the first screen shown when the app starts.\n• It is usually shown for a short time (2–3 seconds).\n• It displays the app logo or name.\n• It improves user experience.\n• You can customize it with your own logo, background color or animation.\n• After the delay, it opens the main screen (MainActivity)."
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:background="#E8F5E8"
+        android:padding="16dp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Output Summary -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📱 Output Summary\n\nSplash Screen (3 seconds) → Main Screen (MainActivity)\n\nSimple app with 2 buttons.\nClick on a button → background color changes and selected color name is displayed."
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:background="#4CAF50"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

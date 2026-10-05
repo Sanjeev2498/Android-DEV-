@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fruits List"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_purple"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:choiceMode="singleChoice" />
+
+    <!-- Output Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📱 Output (App Screen)"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍎 Apple\n🍌 Banana\n🥭 Mango\n🍊 Orange"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Explanation -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple Example – ListView using ArrayAdapter\nHere we use a built-in adapter (ArrayAdapter), so we don't need to create a separate adapter class."
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Key Points -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔑 Key Points to Remember\n• ListView is used to show large list of data (e.g. contacts, products).\n• Each page is a separate layout (page1.xml, page2.xml, page3.xml).\n• We create an Adapter (MyPagerAdapter) to provide pages.\n• TabLayout (dots) shows the current page and total pages.\n• This is an implicit intent, so the user can choose their preferred maps app."
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:padding="8dp" />
+
+</LinearLayout>

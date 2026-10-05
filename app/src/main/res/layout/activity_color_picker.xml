@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Picker App"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Color Status Display -->
+    <TextView
+        android:id="@+id/tvColorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Color Selected"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:padding="16dp"
+        android:layout_marginBottom="50dp" />
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/btnRed"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="RED"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#FF0000"
+            android:layout_marginEnd="20dp" />
+
+        <Button
+            android:id="@+id/btnGreen"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="GREEN"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#00FF00"
+            android:layout_marginStart="20dp" />
+
+    </LinearLayout>
+
+    <!-- Instructions -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How it works:\n• App has 2 buttons: RED and GREEN.\n• When RED is clicked:\n  - Background becomes RED.\n  - TextView shows \"Red\".\n• When GREEN is clicked:\n  - Background becomes GREEN.\n  - TextView shows \"Green\"."
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:layout_marginTop="20dp" />
+
+    <!-- Key Concepts -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key Concepts Used:\n• Explicit Intent (not used here, single activity)\n• UI Components: TextView, Button\n• setBackgroundColor() to change screen color\n• TextView to show selected color name"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:background="@android:color/holo_blue_bright"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
