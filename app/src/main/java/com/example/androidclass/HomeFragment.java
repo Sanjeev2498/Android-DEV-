@@ -88,18 +88,26 @@ public class HomeFragment extends Fragment {
     private void setupClickListeners() {
         btnQuickAddLost.setOnClickListener(v -> {
             // Navigate to Add Item fragment with "Lost" preselected
+            Toast.makeText(getContext(), "Navigate to Add Lost Item", Toast.LENGTH_SHORT).show();
             if (getActivity() instanceof CampusLostFoundActivity) {
-                ((CampusLostFoundActivity) getActivity()).showAddItemFragment("Lost");
+                try {
+                    ((CampusLostFoundActivity) getActivity()).showAddItemFragment("Lost");
+                } catch (Exception e) {
+                    Toast.makeText(getContext(), "Error navigating to Add Item", Toast.LENGTH_SHORT).show();
+                }
             }
-            Toast.makeText(getContext(), "Report Lost Item", Toast.LENGTH_SHORT).show();
         });
 
         btnQuickAddFound.setOnClickListener(v -> {
             // Navigate to Add Item fragment with "Found" preselected
+            Toast.makeText(getContext(), "Navigate to Add Found Item", Toast.LENGTH_SHORT).show();
             if (getActivity() instanceof CampusLostFoundActivity) {
-                ((CampusLostFoundActivity) getActivity()).showAddItemFragment("Found");
+                try {
+                    ((CampusLostFoundActivity) getActivity()).showAddItemFragment("Found");
+                } catch (Exception e) {
+                    Toast.makeText(getContext(), "Error navigating to Add Item", Toast.LENGTH_SHORT).show();
+                }
             }
-            Toast.makeText(getContext(), "Report Found Item", Toast.LENGTH_SHORT).show();
         });
     }
 
@@ -118,9 +126,15 @@ public class HomeFragment extends Fragment {
 
     // Method to refresh data when fragment becomes visible
     public void refreshData() {
-        if (adapter != null) {
-            adapter.notifyDataSetChanged();
+        try {
+            if (adapter != null) {
+                adapter.notifyDataSetChanged();
+            }
+            updateStats();
+        } catch (Exception e) {
+            if (getContext() != null) {
+                Toast.makeText(getContext(), "Error refreshing data", Toast.LENGTH_SHORT).show();
+            }
         }
-        updateStats();
     }
 }

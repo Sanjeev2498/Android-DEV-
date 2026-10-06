@@ -25,30 +25,45 @@ public class CampusLostFoundActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_campus_lost_found);
+        
+        try {
+            setContentView(R.layout.activity_campus_lost_found);
 
-        // Initialize data manager
-        dataManager = DataManager.getInstance(this);
-        
-        // Initialize views
-        initializeViews();
-        
-        // Setup navigation buttons
-        setupNavigationButtons();
-        
-        // Initialize fragment manager
-        fragmentManager = getSupportFragmentManager();
-        
-        // Show home fragment by default
-        if (savedInstanceState == null) {
-            showHomeFragment();
+            // Initialize data manager
+            dataManager = DataManager.getInstance(this);
+            
+            // Initialize views
+            initializeViews();
+            
+            // Setup navigation buttons
+            setupNavigationButtons();
+            
+            // Initialize fragment manager
+            fragmentManager = getSupportFragmentManager();
+            
+            // Show home fragment by default
+            if (savedInstanceState == null) {
+                showHomeFragment();
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Error initializing app: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            e.printStackTrace();
         }
     }
 
     private void initializeViews() {
-        btnHome = findViewById(R.id.btnHome);
-        btnAddItem = findViewById(R.id.btnAddItem);
-        btnMyItems = findViewById(R.id.btnMyItems);
+        try {
+            btnHome = findViewById(R.id.btnHome);
+            btnAddItem = findViewById(R.id.btnAddItem);
+            btnMyItems = findViewById(R.id.btnMyItems);
+            
+            if (btnHome == null || btnAddItem == null || btnMyItems == null) {
+                throw new RuntimeException("One or more navigation buttons not found in layout");
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Error initializing views: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
     }
 
     private void setupNavigationButtons() {
@@ -79,16 +94,12 @@ public class CampusLostFoundActivity extends AppCompatActivity {
 
     // Fragment navigation methods
     public void showHomeFragment() {
-        if (homeFragment == null) {
+        try {
             homeFragment = HomeFragment.newInstance();
-        }
-        
-        replaceFragment(homeFragment, "HOME");
-        currentFragmentTag = "HOME";
-        
-        // Refresh home fragment data
-        if (homeFragment != null) {
-            homeFragment.refreshData();
+            replaceFragment(homeFragment, "HOME");
+            currentFragmentTag = "HOME";
+        } catch (Exception e) {
+            Toast.makeText(this, "Error loading Home: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
