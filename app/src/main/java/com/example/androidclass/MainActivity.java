@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextName, editTextEmail, editTextPhone;
     private RadioGroup radioGroupGender;
     private CheckBox checkBoxJava, checkBoxPython, checkBoxCpp;
-    private Button buttonSubmit, buttonGoToLogin, buttonGoToProfile, buttonGoToCitySelection, buttonGoToLanguageSelection, buttonGoToImplicitIntent, buttonGoToStudentForm, buttonGoToHelloName, buttonGoToColorPicker, buttonGoToRadioButton, buttonGoToCardView, buttonGoToFragment, buttonGoToSplash, buttonGoToListView, buttonGoToViewPager;
+    private Button buttonSubmit, buttonGoToLogin, buttonGoToProfile, buttonGoToCitySelection, buttonGoToLanguageSelection, buttonGoToImplicitIntent, buttonGoToStudentForm, buttonGoToHelloName, buttonGoToColorPicker, buttonGoToRadioButton, buttonGoToCardView, buttonGoToFragment, buttonGoToSplash, buttonGoToListView, buttonGoToViewPager, buttonGoToContextMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         buttonGoToSplash = findViewById(R.id.buttonGoToSplash);
         buttonGoToListView = findViewById(R.id.buttonGoToListView);
         buttonGoToViewPager = findViewById(R.id.buttonGoToViewPager);
+        buttonGoToContextMenu = findViewById(R.id.buttonGoToContextMenu);
 
         // Set click listener for submit button
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -178,6 +179,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set click listener for navigation to context menu example
+        buttonGoToContextMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContextMenuActivity.class);
                 startActivity(intent);
             }
         });

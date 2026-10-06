@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/menu_call"
+        android:title="Call"
+        android:icon="@android:drawable/ic_menu_call" />
+    
+    <item
+        android:id="@+id/menu_send_email"
+        android:title="Send Email"
+        android:icon="@android:drawable/ic_menu_send" />
+    
+    <item
+        android:id="@+id/menu_edit_contact"
+        android:title="Edit Contact"
+        android:icon="@android:drawable/ic_menu_edit" />
+    
+    <item
+        android:id="@+id/menu_delete_contact"
+        android:title="Delete Contact"
+        android:icon="@android:drawable/ic_menu_delete" />
+        
+</menu>

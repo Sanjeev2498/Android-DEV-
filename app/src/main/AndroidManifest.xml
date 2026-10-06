@@ -73,6 +73,9 @@
         <activity
             android:name=".ViewPagerActivity"
             android:exported="false" />
+        <activity
+            android:name=".ContextMenuActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
