@@ -108,26 +108,22 @@ public class ContextMenuActivity extends AppCompatActivity {
         }
         
         Contact selectedContact = contactList.get(selectedContactPosition);
+        int itemId = item.getItemId();
         
-        switch (item.getItemId()) {
-            case R.id.menu_call:
-                callContact(selectedContact);
-                return true;
-                
-            case R.id.menu_send_email:
-                sendEmail(selectedContact);
-                return true;
-                
-            case R.id.menu_edit_contact:
-                editContact(selectedContact);
-                return true;
-                
-            case R.id.menu_delete_contact:
-                deleteContact(selectedContactPosition);
-                return true;
-                
-            default:
-                return super.onContextItemSelected(item);
+        if (itemId == R.id.menu_call) {
+            callContact(selectedContact);
+            return true;
+        } else if (itemId == R.id.menu_send_email) {
+            sendEmail(selectedContact);
+            return true;
+        } else if (itemId == R.id.menu_edit_contact) {
+            editContact(selectedContact);
+            return true;
+        } else if (itemId == R.id.menu_delete_contact) {
+            deleteContact(selectedContactPosition);
+            return true;
+        } else {
+            return super.onContextItemSelected(item);
         }
     }
 

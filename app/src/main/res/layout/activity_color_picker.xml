@@ -8,7 +8,6 @@
     android:padding="24dp"
     android:background="@android:color/white">
 
-    <!-- Title -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +17,6 @@
         android:textColor="@android:color/black"
         android:layout_marginBottom="40dp" />
 
-    <!-- Color Status Display -->
     <TextView
         android:id="@+id/tvColorName"
         android:layout_width="wrap_content"
@@ -31,7 +29,6 @@
         android:padding="16dp"
         android:layout_marginBottom="50dp" />
 
-    <!-- Buttons Container -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,11 +60,10 @@
 
     </LinearLayout>
 
-    <!-- Instructions -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How it works:\n• App has 2 buttons: RED and GREEN.\n• When RED is clicked:\n  - Background becomes RED.\n  - TextView shows \"Red\".\n• When GREEN is clicked:\n  - Background becomes GREEN.\n  - TextView shows \"Green\"."
+        android:text="How it works: App has 2 buttons RED and GREEN. When RED is clicked background becomes RED and TextView shows Red. When GREEN is clicked background becomes GREEN and TextView shows Green."
         android:textSize="14sp"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
@@ -75,11 +71,10 @@
         android:padding="16dp"
         android:layout_marginTop="20dp" />
 
-    <!-- Key Concepts -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Key Concepts Used:\n• Explicit Intent (not used here, single activity)\n• UI Components: TextView, Button\n• setBackgroundColor() to change screen color\n• TextView to show selected color name"
+        android:text="Key Concepts Used: UI Components TextView and Button, setBackgroundColor to change screen color, TextView to show selected color name"
         android:textSize="12sp"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"

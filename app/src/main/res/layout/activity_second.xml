@@ -7,7 +7,6 @@
     android:padding="16dp"
     android:background="@android:color/holo_blue_bright">
 
-    <!-- App Title -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +16,6 @@
         android:textColor="@android:color/white"
         android:layout_marginBottom="40dp" />
 
-    <!-- Greeting Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,11 +49,10 @@
 
     </LinearLayout>
 
-    <!-- How it works explanation -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOW IT WORKS (Very Simple)\n• User enters name in EditText.\n• Clicks SAY HELLO button.\n• Name is sent to SecondActivity using Intent.\n• SecondActivity shows \"Hello.. <name>\".\n• Click BACK button to go back to MainActivity."
+        android:text="HOW IT WORKS: User enters name in EditText. Clicks SAY HELLO button. Name is sent to SecondActivity using Intent. SecondActivity shows Hello with name. Click BACK button to go back to MainActivity."
         android:textSize="12sp"
         android:textAlignment="center"
         android:layout_marginTop="20dp"
