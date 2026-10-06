@@ -101,6 +101,10 @@ public class ContextMenuActivity extends AppCompatActivity {
         }
     }
 
+
+
+
+
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         if (selectedContactPosition == -1) {

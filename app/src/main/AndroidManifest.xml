@@ -76,6 +76,12 @@
         <activity
             android:name=".ContextMenuActivity"
             android:exported="false" />
+        <activity
+            android:name=".CollegeWebsiteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CampusLostFoundActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

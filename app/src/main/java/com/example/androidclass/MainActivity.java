@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextName, editTextEmail, editTextPhone;
     private RadioGroup radioGroupGender;
     private CheckBox checkBoxJava, checkBoxPython, checkBoxCpp;
-    private Button buttonSubmit, buttonGoToLogin, buttonGoToProfile, buttonGoToCitySelection, buttonGoToLanguageSelection, buttonGoToImplicitIntent, buttonGoToStudentForm, buttonGoToHelloName, buttonGoToColorPicker, buttonGoToRadioButton, buttonGoToCardView, buttonGoToFragment, buttonGoToSplash, buttonGoToListView, buttonGoToViewPager, buttonGoToContextMenu;
+    private Button buttonSubmit, buttonGoToLogin, buttonGoToProfile, buttonGoToCitySelection, buttonGoToLanguageSelection, buttonGoToImplicitIntent, buttonGoToStudentForm, buttonGoToHelloName, buttonGoToColorPicker, buttonGoToRadioButton, buttonGoToCardView, buttonGoToFragment, buttonGoToSplash, buttonGoToListView, buttonGoToViewPager, buttonGoToContextMenu, buttonGoToCollegeWebsite, buttonGoToCampusLostFound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         buttonGoToListView = findViewById(R.id.buttonGoToListView);
         buttonGoToViewPager = findViewById(R.id.buttonGoToViewPager);
         buttonGoToContextMenu = findViewById(R.id.buttonGoToContextMenu);
+        buttonGoToCollegeWebsite = findViewById(R.id.buttonGoToCollegeWebsite);
+        buttonGoToCampusLostFound = findViewById(R.id.buttonGoToCampusLostFound);
 
         // Set click listener for submit button
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -188,6 +190,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ContextMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set click listener for navigation to college website
+        buttonGoToCollegeWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CollegeWebsiteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set click listener for navigation to campus lost & found app
+        buttonGoToCampusLostFound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CampusLostFoundActivity.class);
                 startActivity(intent);
             }
         });

@@ -288,4 +288,26 @@
         android:textSize="16sp"
         android:backgroundTint="@android:color/holo_red_light" />
 
+    <!-- Navigation Button to College Website -->
+    <Button
+        android:id="@+id/buttonGoToCollegeWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to College Website"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_green_dark" />
+
+    <!-- Navigation Button to Campus Lost & Found App -->
+    <Button
+        android:id="@+id/buttonGoToCampusLostFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Campus Lost &amp; Found App 📱"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp" />
+
 </LinearLayout>
