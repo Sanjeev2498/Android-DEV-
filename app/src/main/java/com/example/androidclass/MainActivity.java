@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextName, editTextEmail, editTextPhone;
     private RadioGroup radioGroupGender;
     private CheckBox checkBoxJava, checkBoxPython, checkBoxCpp;
-    private Button buttonSubmit, buttonGoToLogin, buttonGoToProfile, buttonGoToCitySelection, buttonGoToLanguageSelection, buttonGoToImplicitIntent, buttonGoToStudentForm, buttonGoToHelloName, buttonGoToColorPicker, buttonGoToRadioButton, buttonGoToCardView, buttonGoToFragment, buttonGoToSplash, buttonGoToListView, buttonGoToViewPager, buttonGoToContextMenu, buttonGoToCollegeWebsite, buttonGoToCampusLostFound;
+    private Button buttonSubmit, buttonGoToLogin, buttonGoToProfile, buttonGoToCitySelection, buttonGoToLanguageSelection, buttonGoToImplicitIntent, buttonGoToStudentForm, buttonGoToHelloName, buttonGoToColorPicker, buttonGoToRadioButton, buttonGoToCardView, buttonGoToFragment, buttonGoToSplash, buttonGoToListView, buttonGoToViewPager, buttonGoToContextMenu, buttonGoToCollegeWebsite, buttonGoToCampusLostFound, buttonGoToBatteryDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         buttonGoToContextMenu = findViewById(R.id.buttonGoToContextMenu);
         buttonGoToCollegeWebsite = findViewById(R.id.buttonGoToCollegeWebsite);
         buttonGoToCampusLostFound = findViewById(R.id.buttonGoToCampusLostFound);
+        buttonGoToBatteryDemo = findViewById(R.id.buttonGoToBatteryDemo);
 
         // Set click listener for submit button
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
@@ -208,6 +209,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CampusLostFoundActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Set click listener for navigation to battery demo
+        buttonGoToBatteryDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BatteryDemoActivity.class);
                 startActivity(intent);
             }
         });

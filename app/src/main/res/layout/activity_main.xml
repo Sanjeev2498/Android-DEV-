@@ -310,4 +310,16 @@
         android:drawableLeft="@android:drawable/ic_menu_search"
         android:drawablePadding="8dp" />
 
+    <!-- Navigation Button to Broadcast Receiver Demo -->
+    <Button
+        android:id="@+id/buttonGoToBatteryDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast Receiver - Battery Demo 🔋"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:drawableLeft="@android:drawable/ic_lock_power_off"
+        android:drawablePadding="8dp" />
+
 </LinearLayout>

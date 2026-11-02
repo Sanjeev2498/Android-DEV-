@@ -84,15 +84,19 @@
             android:name=".CollegeWebsiteActivity"
             android:exported="false" />
         <activity
-            android:name=".CampusLostFoundActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".BatteryDemoActivity"
+            android:exported="false" />
+        
+        <!-- Broadcast Receiver for Battery Low -->
+        <receiver
+            android:name=".BatteryLowReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
             </intent-filter>
-        </activity>
+        </receiver>
+        
     </application>
 
 </manifest>
