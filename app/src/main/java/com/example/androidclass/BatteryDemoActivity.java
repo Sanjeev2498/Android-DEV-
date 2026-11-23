@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class BatteryDemoActivity extends AppCompatActivity {
 
     private Button btnStatus;
+    private Button btnLibrary;
     private TextView tvBatteryInfo;
     private BroadcastReceiver batteryReceiver;
 
@@ -24,7 +25,11 @@ public class BatteryDemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_battery_demo);
 
         btnStatus = findViewById(R.id.btnStatus);
+        btnLibrary = findViewById(R.id.btnLibrary);
         tvBatteryInfo = findViewById(R.id.tvBatteryInfo);
+
+        btnLibrary.setOnClickListener(view ->
+                startActivity(new Intent(BatteryDemoActivity.this, DigitalLibraryActivity.class)));
 
         btnStatus.setOnClickListener(new View.OnClickListener() {
             @Override

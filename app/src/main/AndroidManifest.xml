@@ -16,6 +16,9 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".DigitalLibraryActivity"
+            android:exported="false" />
+        <activity
             android:name=".CampusLostFoundActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">

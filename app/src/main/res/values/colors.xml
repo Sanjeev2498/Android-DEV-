@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="library_olive">#66763D</color>
+    <color name="library_deep_olive">#3F4A2C</color>
+    <color name="library_ivory">#F7F4E8</color>
+    <color name="library_muted">#73756A</color>
+    <color name="library_text">#303126</color>
+    <color name="library_border">#DDDCCF</color>
 </resources>
